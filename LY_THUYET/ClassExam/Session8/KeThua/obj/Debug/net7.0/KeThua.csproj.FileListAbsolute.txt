@@ -1,0 +1,15 @@
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\bin\Debug\net7.0\KeThua.exe
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\bin\Debug\net7.0\KeThua.deps.json
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\bin\Debug\net7.0\KeThua.runtimeconfig.json
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\bin\Debug\net7.0\KeThua.dll
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\bin\Debug\net7.0\KeThua.pdb
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.csproj.AssemblyReference.cache
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.AssemblyInfoInputs.cache
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.AssemblyInfo.cs
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.csproj.CoreCompileInputs.cache
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.dll
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\refint\KeThua.dll
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.pdb
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\KeThua.genruntimeconfig.cache
+D:\GitHub\OOP\LY_THUYET\ClassExam\Session8\KeThua\obj\Debug\net7.0\ref\KeThua.dll
