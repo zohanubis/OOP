@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<candidates>
+	<candidate>
+		<sbd>001</sbd>
+		<name>Phạm Hồ Đăng Huy</name>
+		<yearOfBirth>2003</yearOfBirth>
+		<mathScore>8.5</mathScore>
+		<literatureScore>7.75</literatureScore>
+		<foreignLanguageScore>9.0</foreignLanguageScore>
+	</candidate>
+	<candidate>
+		<sbd>002</sbd>
+		<name>Lê Ngọc Quỳnh</name>
+		<yearOfBirth>2003</yearOfBirth>
+		<mathScore>9.0</mathScore>
+		<literatureScore>8.0</literatureScore>
+		<foreignLanguageScore>8.5</foreignLanguageScore>
+	</candidate>
+	<candidate>
+		<sbd>003</sbd>
+		<name>Hoàng Phúc</name>
+		<yearOfBirth>2005</yearOfBirth>
+		<mathScore>9.0</mathScore>
+		<literatureScore>8.0</literatureScore>
+		<foreignLanguageScore>8.5</foreignLanguageScore>
+	</candidate>
+	<candidate>
+		<sbd>004</sbd>
+		<name>Lê Huỳnh Đức</name>
+		<yearOfBirth>2005</yearOfBirth>
+		<mathScore>9.0</mathScore>
+		<literatureScore>8.0</literatureScore>
+		<foreignLanguageScore>8.5</foreignLanguageScore>
+	</candidate>
+	<candidate>
+		<sbd>005</sbd>
+		<name>Trần Văn A</name>
+		<yearOfBirth>1994</yearOfBirth>
+		<mathScore>5.0</mathScore>
+		<literatureScore>8.0</literatureScore>
+		<foreignLanguageScore>8.5</foreignLanguageScore>
+	</candidate>
+	<candidate>
+		<sbd>006</sbd>
+		<name>Trần Văn Tèo</name>
+		<yearOfBirth>1994</yearOfBirth>
+		<mathScore>5.0</mathScore>
+		<literatureScore>0</literatureScore>
+		<foreignLanguageScore>0</foreignLanguageScore>
+	</candidate>
+</candidates>

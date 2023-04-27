@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DanhSach>
+	<GV>
+		<Hoten>Lâm Thị Họa Mi</Hoten>
+		<SoNhom>2</SoNhom>
+	</GV>
+	<GV>
+		<Hoten>Dương Thị Mộng Thùy</Hoten>
+		<SoNhom>1</SoNhom>
+	</GV>
+	<GV>
+		<Hoten>Nguyễn Thị Thùy Trang</Hoten>
+		<SoNhom>1</SoNhom>
+	</GV>
+	<GV>
+		<Hoten>Nguyễn Văn Thịnh</Hoten>
+		<SoNhom>1</SoNhom>
+	</GV>
+</DanhSach>
