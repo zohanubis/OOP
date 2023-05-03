@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DSThiSinh>
+	<ThiSinh>
+		<MaTS>001</MaTS>
+		<HoTen>Phạm Hồ Đăng Huy</HoTen>
+		<GioiTinh>Nam</GioiTinh>
+		<DLyThuyet>10.0</DLyThuyet>
+		<DThucHanh>10.0</DThucHanh>
+	</ThiSinh>
+	<ThiSinh>
+		<MaTS>002</MaTS>
+		<HoTen>Nguyễn Thị Minh Hà</HoTen>
+		<GioiTinh>Nữ</GioiTinh>
+		<DLyThuyet>9.5</DLyThuyet>
+		<DThucHanh>8.5</DThucHanh>
+	</ThiSinh>
+	<ThiSinh>
+		<MaTS>003</MaTS>
+		<HoTen>Trần Văn Nam</HoTen>
+		<GioiTinh>Nam</GioiTinh>
+		<DLyThuyet>8.0</DLyThuyet>
+		<DThucHanh>7.0</DThucHanh>
+	</ThiSinh>
+	<ThiSinh>
+		<MaTS>004</MaTS>
+		<HoTen>Nguyễn Thị Anh Thư</HoTen>
+		<GioiTinh>Nữ</GioiTinh>
+		<DLyThuyet>6.5</DLyThuyet>
+		<DThucHanh>9.0</DThucHanh>
+	</ThiSinh>
+	<ThiSinh>
+		<MaTS>005</MaTS>
+		<HoTen>Lê Văn Hưng</HoTen>
+		<GioiTinh>Nam</GioiTinh>
+		<DLyThuyet>9.0</DLyThuyet>
+		<DThucHanh>8.0</DThucHanh>
+	</ThiSinh>
+	<ThiSinh>
+		<MaTS>006</MaTS>
+		<HoTen>Trần Thị Thu Hiền</HoTen>
+		<GioiTinh>Nữ</GioiTinh>
+		<DLyThuyet>8.5</DLyThuyet>
+		<DThucHanh>7.5</DThucHanh>
+	</ThiSinh>
+	<ThiSinh>
+		<MaTS>007</MaTS>
+		<HoTen>Phan Đình Tùng</HoTen>
+		<GioiTinh>Nam</GioiTinh>
+		<DLyThuyet>7.0</DLyThuyet>
+		<DThucHanh>9.5</DThucHanh>
+	</ThiSinh>
+</DSThiSinh>

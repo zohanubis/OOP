@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SanPhams>
+	<SanPham>
+		<maSanPham>SP001</maSanPham>
+		<tenSanPham>Áo sơ mi nam</tenSanPham>
+		<namSanXuat>2021</namSanXuat>
+		<donGia>250000.0</donGia>
+		<loaiSanPham>A</loaiSanPham>
+		<soLuongBan>500</soLuongBan>
+	</SanPham>
+	<SanPham>
+		<maSanPham>SP002</maSanPham>
+		<tenSanPham>Giày thể thao nữ</tenSanPham>
+		<namSanXuat>2022</namSanXuat>
+		<donGia>350000.0</donGia>
+		<loaiSanPham>B</loaiSanPham>
+		<soLuongBan>200</soLuongBan>
+	</SanPham>
+	<SanPham>
+		<maSanPham>SP003</maSanPham>
+		<tenSanPham>Xe máy Honda</tenSanPham>
+		<namSanXuat>2021</namSanXuat>
+		<donGia>20000000.0</donGia>
+		<loaiSanPham>C</loaiSanPham>
+		<soLuongBan>20</soLuongBan>
+	</SanPham>
+	<SanPham>
+		<maSanPham>SP004</maSanPham>
+		<tenSanPham>Xe đạp thể thao</tenSanPham>
+		<namSanXuat>2022</namSanXuat>
+		<donGia>8000000.0</donGia>
+		<loaiSanPham>C</loaiSanPham>
+		<soLuongBan>150</soLuongBan>
+	</SanPham>
+	<SanPham>
+		<maSanPham>SP005</maSanPham>
+		<tenSanPham>Xe hơi Toyota</tenSanPham>
+		<namSanXuat>2022</namSanXuat>
+		<donGia>500000000.0</donGia>
+		<loaiSanPham>D</loaiSanPham>
+		<soLuongBan>100</soLuongBan>
+	</SanPham>
+</SanPhams>

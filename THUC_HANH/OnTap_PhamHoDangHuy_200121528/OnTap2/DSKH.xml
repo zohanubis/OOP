@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KhoaHocs>
+	<KhoaHoc>
+		<MaKhoaHoc>KH001</MaKhoaHoc>
+		<TenKhoaHoc>Android Programming</TenKhoaHoc>
+		<SoTietHoc>48</SoTietHoc>
+		<GioHoc>2,4,6</GioHoc>
+		<SLHocVien>13</SLHocVien>
+		<GVGiangDay>Zohanubis</GVGiangDay>
+	</KhoaHoc>
+	<KhoaHoc>
+		<MaKhoaHoc>KH002</MaKhoaHoc>
+		<TenKhoaHoc>Web Development</TenKhoaHoc>
+		<SoTietHoc>36</SoTietHoc>
+		<GioHoc>3,5,7</GioHoc>
+		<SLHocVien>15</SLHocVien>
+		<GVGiangDay>John Smith</GVGiangDay>
+	</KhoaHoc>
+	<KhoaHoc>
+		<MaKhoaHoc>KH003</MaKhoaHoc>
+		<TenKhoaHoc>Data Science</TenKhoaHoc>
+		<SoTietHoc>60</SoTietHoc>
+		<GioHoc>7,CN</GioHoc>
+		<SLHocVien>10</SLHocVien>
+		<GVGiangDay>Jane Doe</GVGiangDay>
+	</KhoaHoc>
+	<KhoaHoc>
+		<MaKhoaHoc>KH004</MaKhoaHoc>
+		<TenKhoaHoc>Kỹ thuật lập trình</TenKhoaHoc>
+		<SoTietHoc>60</SoTietHoc>
+		<GioHoc>2,4,6</GioHoc>
+		<SLHocVien>50</SLHocVien>
+		<GVGiangDay>Nguyễn Văn A</GVGiangDay>
+	</KhoaHoc>
+	<KhoaHoc>
+		<MaKhoaHoc>KH005</MaKhoaHoc>
+		<TenKhoaHoc>Cơ sở dữ liệu</TenKhoaHoc>
+		<SoTietHoc>45</SoTietHoc>
+		<GioHoc>3,5,7</GioHoc>
+		<SLHocVien>40</SLHocVien>
+		<GVGiangDay>Trần Thị B</GVGiangDay>
+	</KhoaHoc>
+	<KhoaHoc>
+		<MaKhoaHoc>CN003</MaKhoaHoc>
+		<TenKhoaHoc>Phân tích thiết kế hệ thống thông tin</TenKhoaHoc>
+		<SoTietHoc>75</SoTietHoc>
+		<GioHoc>2,4,6</GioHoc>
+		<SLHocVien>60</SLHocVien>
+		<GVGiangDay>Phạm Văn C</GVGiangDay>
+	</KhoaHoc>
+	<KhoaHoc>
+		<MaKhoaHoc>CN004</MaKhoaHoc>
+		<TenKhoaHoc>Mạng máy tính</TenKhoaHoc>
+		<SoTietHoc>30</SoTietHoc>
+		<GioHoc>7,CN</GioHoc>
+		<SLHocVien>25</SLHocVien>
+		<GVGiangDay>Đinh Thị D</GVGiangDay>
+	</KhoaHoc>
+	<KhoaHoc>
+		<MaKhoaHoc>CN005</MaKhoaHoc>
+		<TenKhoaHoc>Khoa học máy tính</TenKhoaHoc>
+		<SoTietHoc>90</SoTietHoc>
+		<GioHoc>3,5,7</GioHoc>
+		<SLHocVien>70</SLHocVien>
+		<GVGiangDay>Lê Văn E</GVGiangDay>
+	</KhoaHoc>
+</KhoaHocs>

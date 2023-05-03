@@ -1,0 +1,7 @@
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\OnTap_PhamHoDangHuy_200121528\bin\Debug\OnTap_PhamHoDangHuy_200121528.exe.config
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\OnTap_PhamHoDangHuy_200121528\bin\Debug\OnTap_PhamHoDangHuy_200121528.exe
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\OnTap_PhamHoDangHuy_200121528\bin\Debug\OnTap_PhamHoDangHuy_200121528.pdb
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\OnTap_PhamHoDangHuy_200121528\obj\Debug\OnTap_PhamHoDangHuy_200121528.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\OnTap_PhamHoDangHuy_200121528\obj\Debug\OnTap_PhamHoDangHuy_200121528.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\OnTap_PhamHoDangHuy_200121528\obj\Debug\OnTap_PhamHoDangHuy_200121528.exe
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\OnTap_PhamHoDangHuy_200121528\obj\Debug\OnTap_PhamHoDangHuy_200121528.pdb

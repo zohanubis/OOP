@@ -1,0 +1,7 @@
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\Bai1\bin\Debug\Bai1.exe.config
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\Bai1\bin\Debug\Bai1.exe
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\Bai1\bin\Debug\Bai1.pdb
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\Bai1\obj\Debug\Bai1.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\Bai1\obj\Debug\Bai1.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\Bai1\obj\Debug\Bai1.exe
+D:\Microsoft Visual Studio 2019\THOOP\OnTap_PhamHoDangHuy_200121528\Bai1\obj\Debug\Bai1.pdb
