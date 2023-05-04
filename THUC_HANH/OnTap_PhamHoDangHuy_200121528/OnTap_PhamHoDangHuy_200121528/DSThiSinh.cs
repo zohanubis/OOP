@@ -100,6 +100,32 @@ namespace OnTap_PhamHoDangHuy_200121528
                 Console.WriteLine("---------------------------------------");
             }
         }
+        // Sắp xếp tăng dần theo tên Thí Sinh
+        public void DanhSachSapXepTheoTen()
+        {
+            List<ThiSinh> dsSapXep = DSTS1.OrderBy(ts => ts.HoTen).ToList();
+            foreach(ThiSinh ts in dsSapXep)
+            {
+                ts.XuatThongTin();
+                Console.WriteLine("---------------------------------------------------");
 
+            }
+
+        }
+        // Xuất thông tin 3 thí sinh có điểm cao nhất
+        public void XuatThong3TSCoDiemCaoNhat()
+        {
+            List<ThiSinh> dsSapXep = DSTS1.OrderByDescending(ts => ts.TinhDiemTongKet()).ToList();
+            Console.WriteLine("Xuất 3 thông tin thí sinh có điểm cao nhất");
+            int count = 0;
+            foreach(ThiSinh ts in dsSapXep)
+            {
+                ts.XuatThongTin();
+                count++;
+                if(count == 3) {
+                    break;
+                }
+            }    
+        }
     }
 }

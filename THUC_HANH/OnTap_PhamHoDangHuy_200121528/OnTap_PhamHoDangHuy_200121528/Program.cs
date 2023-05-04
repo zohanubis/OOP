@@ -37,6 +37,8 @@ namespace OnTap_PhamHoDangHuy_200121528
                                 Console.WriteLine("5. Tổng số thí sinh đậu và rớt");
                                 Console.WriteLine("6. Cho mã, in thông tin thí sinh");
                                 Console.WriteLine("7. Sắp xếp ds giảm dần của điểm tổng kết");
+                                Console.WriteLine("8. Xuất thông tin 3 thí sinh có điểm cao nhất");
+                                Console.WriteLine("9. Sắp xếp ds tăng dần theo tên");
                                 Console.WriteLine("---------------------------------------------------");
 
                                 Console.Write("Nhập lựa chọn : ");
@@ -91,6 +93,17 @@ namespace OnTap_PhamHoDangHuy_200121528
                                         {
                                             Console.WriteLine("Danh sách thí sinh giảm dần theo điểm tổng kết : ");
                                             dsts.XuatDanhSachSapXep();
+                                            break;
+                                        }
+                                    case 8:
+                                        {
+                                            dsts.XuatThong3TSCoDiemCaoNhat();
+                                            break;
+                                        }
+                                    case 9:
+                                        {
+                                            Console.WriteLine("Sắp xếp danh sách tăng theo tên");
+                                            dsts.DanhSachSapXepTheoTen();
                                             break;
                                         }
                                     default:
