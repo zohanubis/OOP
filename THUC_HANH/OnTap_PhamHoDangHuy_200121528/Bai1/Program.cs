@@ -14,7 +14,7 @@ namespace OnTap1
             KhoSanPham ksp = new KhoSanPham();
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
-            int choice, choice1;
+            int choice;
 
             do
             {

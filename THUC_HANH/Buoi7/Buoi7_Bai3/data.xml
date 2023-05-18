@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Monhocs>
+	<MH>
+		<Loai>LyThuyet</Loai>
+		<Ma>MH001</Ma>
+		<Ten>Mon Ly Thuyet 1</Ten>
+		<SoTc>3</SoTc>
+		<DiemTieuLuan>8.5</DiemTieuLuan>
+		<DiemGiuaKy>7.5</DiemGiuaKy>
+		<DiemCuoiKy>9.0</DiemCuoiKy>
+	</MH>
+	<MH>
+		<Loai>ThucHanh</Loai>
+		<Ma>MH002</Ma>
+		<Ten>Mon Thuc Hanh 1</Ten>
+		<SoTc>2</SoTc>
+		<DiemKiemTra>
+			<Diem>7.5</Diem>
+			<Diem>8.0</Diem>
+			<Diem>7.0</Diem>
+			<Diem>8.5</Diem>
+		</DiemKiemTra>
+	</MH>
+	<MH>
+		<Loai>DoAn</Loai>
+		<Ma>MH003</Ma>
+		<Ten>Mon Do An 1</Ten>
+		<SoTc>4</SoTc>
+		<DiemGVHD>8.0</DiemGVHD>
+		<DiemGVPB>7.5</DiemGVPB>
+	</MH>
+</Monhocs>

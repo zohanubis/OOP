@@ -15,7 +15,7 @@ namespace OnTap_PhamHoDangHuy_200121528
             Console.InputEncoding = Encoding.UTF8;
             ThiSinh ts2 = new ThiSinh();
             DSThiSinh dsts = new DSThiSinh();
-            int choice, choice1, choice2;
+            int choice, choice1;
 
             do
             {
