@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using Internal;
+using System;
 using System.Text;
 
 public abstract class NhanVien
@@ -13,7 +15,6 @@ public abstract class NhanVien
         get { return maNV; }
         set
         {
-            // Kiểm tra định dạng Mã NV
             if (value.Length == 5 && value.Substring(0, 2) 
                 == "NV" && Char.IsDigit(value[2]) && value[3] 
                 == 'E' && Char.IsDigit(value[4]))
@@ -184,17 +185,40 @@ class Program
         NhanVienBienChe nvBienChe = new NhanVienBienChe("NV2E4", "Tran Anh", "GD", 2011, 20);
         NhanVienHopDong nvHopDong = new NhanVienHopDong("NV3E5", "Nguyen Van A", "TP", 2013, 30);
         NhanVienChuyenGia nvChuyenGia = new NhanVienChuyenGia("NV4E6", "Le Thi B", "CG", 2012, 4);
-
-        nvBienChe.HienThiThongTin();
-        Console.WriteLine("Lương nhân viên biên chế: " + nvBienChe.TinhLuong());
-
-        nvHopDong.HienThiThongTin();
-        Console.WriteLine("Lương nhân viên hợp đồng: " + nvHopDong.TinhLuong());
-        Console.WriteLine("Hỗ trợ lương nhân viên hợp đồng: " + nvHopDong.TinhHoTroLuong());
-
-        nvChuyenGia.HienThiThongTin();
-        Console.WriteLine("Lương nhân viên chuyên gia: " + nvChuyenGia.TinhLuong());
-        Console.WriteLine("Hỗ trợ lương nhân viên chuyên gia: " + nvChuyenGia.TinhHoTroLuong());
+        int choice;
+        {
+            do{
+                Console.WriteLine("1. Nhân Viên Biên Chế");
+                Console.WriteLine("2. Nhân Viên Hợp Đồng");
+                Console.WriteLine("3. Nhân Viên Chuyên Gia");
+                Console.Write("Nhập lựa chọn : ");
+                choice = int.Parse(Console.ReadLine());
+                switch(choice){
+                    case 1:{
+                        nvBienChe.HienThiThongTin();
+                        Console.WriteLine("Lương nhân viên biên chế: " + nvBienChe.TinhLuong());
+                        break;
+                    }
+                    case 2:{
+                        nvHopDong.HienThiThongTin();
+                        Console.WriteLine("Lương nhân viên hợp đồng: " + nvHopDong.TinhLuong());
+                        Console.WriteLine("Hỗ trợ lương nhân viên hợp đồng: " + nvHopDong.TinhHoTroLuong());
+                        break;
+                    }
+                    case 3:{
+                        nvChuyenGia.HienThiThongTin();
+                        Console.WriteLine("Lương nhân viên chuyên gia: " + nvChuyenGia.TinhLuong());
+                        Console.WriteLine("Hỗ trợ lương nhân viên chuyên gia: " + nvChuyenGia.TinhHoTroLuong());
+                        break;
+                    }
+                    default: Console.WriteLine("Lựa chọn không hợp lệ");
+                    break;
+                }
+            }while(choice != 0);
+        }
+       
+        
+        
 
         Console.ReadLine();
     }
