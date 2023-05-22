@@ -1,0 +1,15 @@
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\bin\Debug\net6.0\OnTap.exe
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\bin\Debug\net6.0\OnTap.deps.json
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\bin\Debug\net6.0\OnTap.runtimeconfig.json
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\bin\Debug\net6.0\OnTap.dll
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\bin\Debug\net6.0\OnTap.pdb
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.GeneratedMSBuildEditorConfig.editorconfig
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.AssemblyInfoInputs.cache
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.AssemblyInfo.cs
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.dll
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\refint\OnTap.dll
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.pdb
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\OnTap.genruntimeconfig.cache
+D:\Microsoft Visual Studio\TH OOP\OOP\New folder\OnTap_SoDoLop\OnTap\OnTap\obj\Debug\net6.0\ref\OnTap.dll

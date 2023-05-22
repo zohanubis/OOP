@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "goVAzGgAyB0kWGKzVCQwjqhL0GmV6cwrPIF62JXLDtlb1tk+6ILPp8s+iPzARVofGsNeuWrvJp+NGE9ItfPB3w==",
+  "success": true,
+  "projectFilePath": "D:\\Microsoft Visual Studio\\TH OOP\\OOP\\New folder\\OnTap_SoDoLop\\OnTap\\OnTap\\OnTap.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phdh1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\phdh1\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\phdh1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\phdh1\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

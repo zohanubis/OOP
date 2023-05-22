@@ -1,0 +1,27 @@
+Có thông tin nhân viên:
+        • Mã NV
+        • Họ Tên
+        • Mã Chức vụ
+        • Năm vào làm
+    + Xây dựng lớp nhân viên
+    + Xây dựng phương thức get/set cho mã NV biết: Mã NV có 5 ký tự, 2 ký tự đầu là “NV”, ký tự thứ
+3 là 1 ký số, ký tự thứ 4 là “E”, ký tự cuối là ký số. Năm vào làm phải lớn hơn 2010 nhỏ hơn 2014.
+    + Xây dựng phương thức khởi tạo mặc định tạo ra 1 NV có Mã NV là “NV2E4”, Họ tên là “Tran
+Anh”, Mã chức vụ là “GD”, năm vào làm là 2016.
+    + Xây dựng phương thức khởi tạo có tham số với các tham số truyến vào là Mã NV, Họ tên, Mã
+chức vụ, với năm vào làm là 2013.
+    + Xây dựng phương thức tính lương biết rằng:
+            o lương = Lương cơ bản * hệ số lương + phụ cấp CV + tổng số năm làm * 100000
+        ▪ Phụ cấp CV bằng:
+        • 1000000 nếu Mã CV là “GD”
+        • 700000 nếu Mã CV là “PGD”
+        • 500000 nếu Mã CV là “TP”
+        • 300000 nếu Mã CV là “PD”
+        ▪ Tổng số năm làm = năm nay – năm vào làm
+        ▪ Hệ số lương tùy vào looại nhân viên:
+        • Với nhân viên Biên chế: Hệ số lương = 2 * số ngày làm/22 nếu là nhân viên, còn lai là 3* số ngày làm/24.
+        • Với nhân viên Hợp đồng: Hệ số lương = 1 * số buổi làm/44 nếu là nhân viên, còn lại là 2 * số buổi làm/48.
+        • Với nhân viên là chuyên gia: Hệ số lương = 5 * số nhóm làm việc.
+    + Để thu hút nhân viên giỏi không nằm trong biên chế thì ngoài lương còn hỗ trợ:
+        o Nhân viên hợp đồng: làm việc đủ buổi tiêu chuẩn 1000000.
+        o Chuyên gia có số nhóm vượt 3, hỗ trợ 1000000 cho mỗi nhóm vượt và tối đa là 4000000
