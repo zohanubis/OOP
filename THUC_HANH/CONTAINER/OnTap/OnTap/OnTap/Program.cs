@@ -1,5 +1,4 @@
 ﻿
-using Internal;
 using System;
 using System.Text;
 
@@ -15,8 +14,8 @@ public abstract class NhanVien
         get { return maNV; }
         set
         {
-            if (value.Length == 5 && value.Substring(0, 2) 
-                == "NV" && Char.IsDigit(value[2]) && value[3] 
+            if (value.Length == 5 && value.Substring(0, 2)
+                == "NV" && Char.IsDigit(value[2]) && value[3]
                 == 'E' && Char.IsDigit(value[4]))
             {
                 maNV = value;
@@ -187,38 +186,44 @@ class Program
         NhanVienChuyenGia nvChuyenGia = new NhanVienChuyenGia("NV4E6", "Le Thi B", "CG", 2012, 4);
         int choice;
         {
-            do{
+            do
+            {
                 Console.WriteLine("1. Nhân Viên Biên Chế");
                 Console.WriteLine("2. Nhân Viên Hợp Đồng");
                 Console.WriteLine("3. Nhân Viên Chuyên Gia");
                 Console.Write("Nhập lựa chọn : ");
                 choice = int.Parse(Console.ReadLine());
-                switch(choice){
-                    case 1:{
-                        nvBienChe.HienThiThongTin();
-                        Console.WriteLine("Lương nhân viên biên chế: " + nvBienChe.TinhLuong());
+                switch (choice)
+                {
+                    case 1:
+                        {
+                            nvBienChe.HienThiThongTin();
+                            Console.WriteLine("Lương nhân viên biên chế: " + nvBienChe.TinhLuong());
+                            break;
+                        }
+                    case 2:
+                        {
+                            nvHopDong.HienThiThongTin();
+                            Console.WriteLine("Lương nhân viên hợp đồng: " + nvHopDong.TinhLuong());
+                            Console.WriteLine("Hỗ trợ lương nhân viên hợp đồng: " + nvHopDong.TinhHoTroLuong());
+                            break;
+                        }
+                    case 3:
+                        {
+                            nvChuyenGia.HienThiThongTin();
+                            Console.WriteLine("Lương nhân viên chuyên gia: " + nvChuyenGia.TinhLuong());
+                            Console.WriteLine("Hỗ trợ lương nhân viên chuyên gia: " + nvChuyenGia.TinhHoTroLuong());
+                            break;
+                        }
+                    default:
+                        Console.WriteLine("Lựa chọn không hợp lệ");
                         break;
-                    }
-                    case 2:{
-                        nvHopDong.HienThiThongTin();
-                        Console.WriteLine("Lương nhân viên hợp đồng: " + nvHopDong.TinhLuong());
-                        Console.WriteLine("Hỗ trợ lương nhân viên hợp đồng: " + nvHopDong.TinhHoTroLuong());
-                        break;
-                    }
-                    case 3:{
-                        nvChuyenGia.HienThiThongTin();
-                        Console.WriteLine("Lương nhân viên chuyên gia: " + nvChuyenGia.TinhLuong());
-                        Console.WriteLine("Hỗ trợ lương nhân viên chuyên gia: " + nvChuyenGia.TinhHoTroLuong());
-                        break;
-                    }
-                    default: Console.WriteLine("Lựa chọn không hợp lệ");
-                    break;
                 }
-            }while(choice != 0);
+            } while (choice != 0);
         }
-       
-        
-        
+
+
+
 
         Console.ReadLine();
     }
