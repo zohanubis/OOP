@@ -1,0 +1,26 @@
+﻿Công ty Hòa Phát chuyên sản xuất ba dạng sản phẩm bàn ghế, bao gồm ghế xoay, ghế lưới và ghế họp. 
+Thông tin chi tiết của các sản phẩm bao gồm mã sản phẩm, tên sản phẩm, số lượng, đơn giá và phương thức tính thuế. 
+Cách tính thuế cho mỗi dạng sản phẩm như sau:
+	Ghế xoay: thuế = đơn giá * 10%.
+	Ghế lưới: thuế = đơn giá * 3%.
+	Ghế họp: thuế = đơn giá * 5%.
+Đối với ghế xoay và ghế lưới, cần có hai phương thức tính phí bảo vệ môi trường (phiBVMT) và phí tái chế (phiTaiChe). Cụ thể:
+	Ghế xoay:
+		phí bảo vệ môi trường = đơn giá * 5%.
+		phí tái chế = đơn giá * 4%.
+	Ghế lưới:
+		phí bảo vệ môi trường = đơn giá * 3%.
+		phí tái chế = đơn giá * 2%.
+Các yêu cầu khác:
+
+1.Thiết kế và xây dựng các lớp để quản lý thông tin như mô tả trên.
+Xây dựng phương thức get/set cho thuộc tính mã sản phẩm, đơn giá và số lượng.
+Mã sản phẩm chỉ chứa 4 ký tự (2 kí tự đầu là "SP" và 2 kí tự cuối là thể hiện thứ tự sản phẩm).
+Đơn giá và số lượng phải là số dương.
+Xây dựng phương thức khởi tạo mặc định tạo một sản phẩm với mã "SP01" và tên sản phẩm "Ghế lưới đa năng văn phòng".
+Xây dựng phương thức khởi tạo có tham số mã sản phẩm "SP019" và tên sản phẩm "Ghế họp thông thường".
+Xây dựng phương thức tính thành tiền cho sản phẩm, với công thức Thành tiền = đơn giá * số lượng + thuế + phí quảng bá sản phẩm. Phí quảng bá sản phẩm được tính tùy theo loại sản phẩm:
+Ghế xoay: Nếu là loại ghế xoay dành cho trẻ em, phí quảng bá sản phẩm là 0. Nếu là loại ghế xoay dành cho nhân viên, phí quảng bá sản phẩm là 20000. Nếu là loại ghế xoay dành cho giám đốc, phí quảng bá sản phẩm là 40000.
+Ghế lưới: Nếu diện tích lưới lớn hơn 10, phí quảng bá sản phẩm là 50000. Ngược lại, phí quảng bá sản phẩm là 0.
+Ghế họp: Nếu cân nặng dưới 5 kí, phí quảng bá sản phẩm là 0. Ngược lại, phí quảng bá sản phẩm là 60000.
+Xây dựng phương thức tính số tiền phải đóng thuế cho sản phẩm. Số tiền phải đóng thuế được tính bằng công thức Số tiền phải đóng = Thành tiền + thuế * tỉ lệ thuế. Tỉ lệ thuế áp dụng chung cho tất cả sản phẩm và hiện tại được qui định là 10%."

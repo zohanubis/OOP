@@ -1,0 +1,7 @@
+D:\Microsoft Visual Studio 2019\THOOP\OnTapOOP\Bai3\bin\Debug\Bai3.exe.config
+D:\Microsoft Visual Studio 2019\THOOP\OnTapOOP\Bai3\bin\Debug\Bai3.exe
+D:\Microsoft Visual Studio 2019\THOOP\OnTapOOP\Bai3\bin\Debug\Bai3.pdb
+D:\Microsoft Visual Studio 2019\THOOP\OnTapOOP\Bai3\obj\Debug\Bai3.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio 2019\THOOP\OnTapOOP\Bai3\obj\Debug\Bai3.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio 2019\THOOP\OnTapOOP\Bai3\obj\Debug\Bai3.exe
+D:\Microsoft Visual Studio 2019\THOOP\OnTapOOP\Bai3\obj\Debug\Bai3.pdb

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bai3.GheHop">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAABAAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>GheHop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bai3.GheLuoi" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAABAAAAAQAAABAAAAAAAAAAgACAAAAAAAAAA=</HashCode>
+      <FileName>GheLuoi.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Bai3.GheXoay">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAABAAAAAAAAAAgACAAAAAAAAAA=</HashCode>
+      <FileName>GheXoay.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Bai3.Program" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bai3.SanPham">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAEAAAAQAAAIGAAAAAAAAAAAAAAACAAACAAAAAgBAEA=</HashCode>
+      <FileName>SanPham.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Bai3.IPhi">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>IPhi.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

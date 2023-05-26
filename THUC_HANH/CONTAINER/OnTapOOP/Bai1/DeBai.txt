@@ -1,0 +1,11 @@
+﻿Thông tin Nhân Viên công ty ABC gồm
+Mã Nhân Viên (string), Tên Nhân Viên (string), Trình Độ (string), Nơi Đào Tạo (string), Hệ số lương (double), Số Lỗi Vi Phạm (int). Lương cơ bản hiện tại 1,5 triệu.
+1. Xây dựng phương thức get/set thuộc tính Mã Nhân Viên : 2 ký tự đầu là "01"
+2. Xây dựng phương thức get/set thuộc tính Nơi đào tạo : Việt Nam hoặc Nước Ngoài
+3. Xây dựng phương thức khởi tạo sao chép
+4. Xây dựng phương thức tính lương = hệ số lương * lương cơ bản + thu nhập tăng thêm
+    - Nhân viên có phần trăm hoa hồng. Thu nhập tăng thêm = phần trăm hoa hồng * 5000000
+    - Ban giám đốc có chức vụ và hệ số chức vụ : Thu nhập tăng thêm = hệ số chức vụ * lương cơ bản
+5. Xây dựng phương thức tính Thực Lãnh = Lương * hệ số thi đua (HSTD)
+    Nhân Viên 0 lỗi vi phạm HSTD = 1.0, 1 lỗi vi phạm HSTD = 0.75 còn lại HSTD = 0.5. Ban giám đốc HSTD luôn luôn bằng 1
+6. Mức hỗ trợ chi phí nhân viên có nơi đào tạo nước ngoài : Lương cơ bản * 2.0
