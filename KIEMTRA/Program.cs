@@ -1,293 +1,355 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
 using System.Xml;
 
-namespace ABCCompany
+namespace CongTyBanHang
 {
-    // Interface IKhachHang
-    public interface IKhachHang
+    public abstract class KhachHang
     {
-        decimal TinhChietKhau();
-    }
+        public string MaKhachHang { get; set; }
+        public string TenKhachHang { get; set; }
+        public int SoLuong { get; set; }
+        public decimal GiaBan { get; set; }
 
-    // Lớp HoaDon
-    public class HoaDon
-    {
-        public string MaKhachHang;
-        public string TenKhachHang;
-        public int SoLuong;
-        public decimal GiaBan;
-        public decimal ThanhTien;
+        public abstract decimal TinhThanhTien();
 
-        public HoaDon() { }
-
-        public HoaDon(string maKhachHang, string tenKhachHang, int soLuong, decimal giaBan)
+        public virtual void NhapThongTin()
         {
-            MaKhachHang = maKhachHang;
-            TenKhachHang = tenKhachHang;
-            SoLuong = soLuong;
-            GiaBan = giaBan;
-            ThanhTien = 0;
+            Console.WriteLine("Nhập mã khách hàng: ");
+            MaKhachHang = Console.ReadLine();
+            Console.WriteLine("Nhập tên khách hàng: ");
+            TenKhachHang = Console.ReadLine();
+            Console.WriteLine("Nhập số lượng: ");
+            SoLuong = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Nhập giá bán: ");
+            GiaBan = Convert.ToDecimal(Console.ReadLine());
         }
 
-        public virtual void TinhThanhTien()
+        public virtual void XuatThongTin()
         {
-            decimal chietKhau = 0; // Chiết khấu cần tính
-            decimal vat = (SoLuong * GiaBan) * 0.1m; // Thuế VAT
-            ThanhTien = (SoLuong * GiaBan) - chietKhau + vat;
+            Console.WriteLine("Mã khách hàng: " + MaKhachHang);
+            Console.WriteLine("Tên khách hàng: " + TenKhachHang);
+            Console.WriteLine("Số lượng: " + SoLuong);
+            Console.WriteLine("Giá bán: " + GiaBan);
+            Console.WriteLine("Thành tiền: " + TinhThanhTien());
         }
     }
 
-    // Lớp KhachHangCaNhan
-    public class KhachHangCaNhan : HoaDon, IKhachHang
+    public class KhachHangCaNhan : KhachHang
     {
         public int KhoangCachGiaoHang { get; set; }
 
-        public KhachHangCaNhan() : base() { }
-
-        public KhachHangCaNhan(string maKhachHang, string tenKhachHang, int soLuong, decimal giaBan, int khoangCachGiaoHang)
-            : base(maKhachHang, tenKhachHang, soLuong, giaBan)
+        public override decimal TinhThanhTien()
         {
-            KhoangCachGiaoHang = khoangCachGiaoHang;
+            decimal thanhTien = SoLuong * GiaBan - TinhChietKhau() + TinhVat();
+            return thanhTien;
         }
 
-        public override void TinhThanhTien()
+        private decimal TinhChietKhau()
         {
-            decimal chietKhau = SoLuong < 5 ? 0 : GiaBan * SoLuong * 0.03m;
-            if (KhoangCachGiaoHang < 10)
+            decimal chietKhau = 0;
+            if (SoLuong >= 5)
             {
-                chietKhau += 20000 * SoLuong;
-            }
-            decimal vat = (SoLuong * GiaBan) * 0.1m;
-            ThanhTien = (SoLuong * GiaBan) - chietKhau + vat;
-        }
-
-        public decimal TinhChietKhau()
-        {
-            decimal chietKhau = SoLuong < 5 ? 0 : GiaBan * SoLuong * 0.03m;
-            if (KhoangCachGiaoHang < 10)
-            {
-                chietKhau += 20000 * SoLuong;
+                chietKhau = 0.03m * GiaBan * SoLuong;
+                if (KhoangCachGiaoHang < 10)
+                {
+                    chietKhau += 20000 * SoLuong;
+                }
             }
             return chietKhau;
         }
+
+        private decimal TinhVat()
+        {
+            decimal vat = 0.1m * GiaBan * SoLuong;
+            return vat;
+        }
+
+        public override void NhapThongTin()
+        {
+            base.NhapThongTin();
+            Console.WriteLine("Nhập khoảng cách giao hàng: ");
+            KhoangCachGiaoHang = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public override void XuatThongTin()
+        {
+            Console.WriteLine("Loại khách hàng: Khách hàng cá nhân");
+            base.XuatThongTin();
+            Console.WriteLine("Khoảng cách giao hàng: " + KhoangCachGiaoHang);
+        }
     }
 
-    // Lớp DaiLyCap1
-    public class DaiLyCap1 : HoaDon, IKhachHang
+    public class DaiLyCap1 : KhachHang
     {
         public int ThoiGianHopTac { get; set; }
 
-        public DaiLyCap1() : base() { }
-
-        public DaiLyCap1(string maKhachHang, string tenKhachHang, int soLuong, decimal giaBan, int thoiGianHopTac)
-            : base(maKhachHang, tenKhachHang, soLuong, giaBan)
+        public override decimal TinhThanhTien()
         {
-            ThoiGianHopTac = thoiGianHopTac;
+            decimal thanhTien = SoLuong * GiaBan - TinhChietKhau() + TinhVat();
+            return thanhTien;
         }
 
-        public override void TinhThanhTien()
+        private decimal TinhChietKhau()
         {
-            decimal chietKhau = GiaBan * SoLuong * 0.3m;
+            decimal chietKhau = 0.3m * GiaBan * SoLuong;
             if (ThoiGianHopTac > 3)
             {
-                int additionalDiscount = Math.Min(ThoiGianHopTac - 3, 35);
-                chietKhau += GiaBan * SoLuong * (additionalDiscount / 100m);
-            }
-            decimal vat = (SoLuong * GiaBan) * 0.1m;
-            ThanhTien = (SoLuong * GiaBan) - chietKhau + vat;
-        }
-
-        public decimal TinhChietKhau()
-        {
-            decimal chietKhau = GiaBan * SoLuong * 0.3m;
-            if (ThoiGianHopTac > 3)
-            {
-                int additionalDiscount = Math.Min(ThoiGianHopTac - 3, 35);
-                chietKhau += GiaBan * SoLuong * (additionalDiscount / 100m);
+                int soNamVuotDinhMuc = ThoiGianHopTac - 3;
+                decimal chietKhauThem = Math.Min(soNamVuotDinhMuc, 35) * 0.01m * GiaBan * SoLuong;
+                chietKhau += chietKhauThem;
             }
             return chietKhau;
         }
+
+        private decimal TinhVat()
+        {
+            decimal vat = 0.1m * GiaBan * SoLuong;
+            return vat;
+        }
+
+        public override void NhapThongTin()
+        {
+            base.NhapThongTin();
+            Console.WriteLine("Nhập thời gian hợp tác (số năm): ");
+            ThoiGianHopTac = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public override void XuatThongTin()
+        {
+            Console.WriteLine("Loại khách hàng: Đại lý cấp 1");
+            base.XuatThongTin();
+            Console.WriteLine("Thời gian hợp tác: " + ThoiGianHopTac + " năm");
+        }
     }
 
-    // Lớp KhachHangCongTy
-    public class KhachHangCongTy : HoaDon, IKhachHang
+    public class KhachHangCongTy : KhachHang
     {
         public int SoLuongNhanVien { get; set; }
 
-        public KhachHangCongTy() : base() { }
-
-        public KhachHangCongTy(string maKhachHang, string tenKhachHang, int soLuong, decimal giaBan, int soLuongNhanVien)
-            : base(maKhachHang, tenKhachHang, soLuong, giaBan)
+        public override decimal TinhThanhTien()
         {
-            SoLuongNhanVien = soLuongNhanVien;
+            decimal thanhTien = SoLuong * GiaBan - TinhChietKhau() + TinhVat();
+            return thanhTien;
         }
 
-        public override void TinhThanhTien()
+        private decimal TinhChietKhau()
         {
-            decimal chietKhau = SoLuongNhanVien > 5000 ? GiaBan * SoLuong * 0.05m : SoLuongNhanVien > 1000 ? GiaBan * SoLuong * 0.03m : 0;
-            decimal vat = (SoLuong * GiaBan) * 0.1m;
-            ThanhTien = (SoLuong * GiaBan) - chietKhau + vat;
-        }
-
-        public decimal TinhChietKhau()
-        {
-            decimal chietKhau = SoLuongNhanVien > 5000 ? GiaBan * SoLuong * 0.05m : SoLuongNhanVien > 1000 ? GiaBan * SoLuong * 0.03m : 0;
+            decimal chietKhau = 0;
+            if (SoLuongNhanVien > 1000)
+            {
+                chietKhau = 0.03m * GiaBan * SoLuong;
+            }
+            if (SoLuongNhanVien > 5000)
+            {
+                chietKhau = 0.05m * GiaBan * SoLuong;
+            }
             return chietKhau;
+        }
+
+        private decimal TinhVat()
+        {
+            decimal vat = 0.1m * GiaBan * SoLuong;
+            return vat;
+        }
+
+        public override void NhapThongTin()
+        {
+            base.NhapThongTin();
+            Console.WriteLine("Nhập số lượng nhân viên: ");
+            SoLuongNhanVien = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public override void XuatThongTin()
+        {
+            Console.WriteLine("Loại khách hàng: Khách hàng công ty");
+            base.XuatThongTin();
+            Console.WriteLine("Số lượng nhân viên: " + SoLuongNhanVien);
         }
     }
 
-    // Lớp CongTyABC
-    public class CongTyABC
+    public class CongTy
     {
         public string TenCongTy { get; set; }
-        public string DienThoai { get; set; }
+        public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
-        public List<HoaDon> DanhSachHoaDon { get; set; }
+        public List<KhachHang> DanhSachHoaDon { get; set; }
 
-        public CongTyABC()
+        public CongTy()
         {
-            DanhSachHoaDon = new List<HoaDon>();
+            DanhSachHoaDon = new List<KhachHang>();
         }
+        public void Input(string file)
+        {
+            XmlDocument read = new XmlDocument();
+            read.Load("data.xml");
 
-        public void ThemHoaDon(HoaDon hoaDon)
+            XmlNode congTyNode = read.SelectSingleNode("/HoTenSinhVien");
+            string tenCongTy = congTyNode.SelectSingleNode("TenCT").InnerText;
+            string soDienThoai = congTyNode.SelectSingleNode("SoDT").InnerText;
+            string diaChi = congTyNode.SelectSingleNode("DiaChi").InnerText;
+
+            CongTy congTy = new CongTy
+            {
+                TenCongTy = tenCongTy,
+                SoDienThoai = soDienThoai,
+                DiaChi = diaChi
+            };
+
+            XmlNodeList hoaDonNodes = read.SelectNodes("/HoTenSinhVien/DS/HoaDon");
+
+            foreach (XmlNode hoaDonNode in hoaDonNodes)
+            {
+                int loaiKhachHang = Convert.ToInt32(hoaDonNode.SelectSingleNode("Loai").InnerText);
+
+                KhachHang khachHang;
+                switch (loaiKhachHang)
+                {
+                    case 1:
+                        khachHang = new KhachHangCaNhan();
+                        break;
+                    case 2:
+                        khachHang = new DaiLyCap1();
+                        break;
+                    case 3:
+                        khachHang = new KhachHangCongTy();
+                        break;
+                    default:
+                        khachHang = null;
+                        break;
+                }
+
+                if (khachHang != null)
+                {
+                    khachHang.MaKhachHang = hoaDonNode.SelectSingleNode("Ma").InnerText;
+                    khachHang.TenKhachHang = hoaDonNode.SelectSingleNode("Ten").InnerText;
+                    khachHang.SoLuong = Convert.ToInt32(hoaDonNode.SelectSingleNode("SoLuong").InnerText);
+                    khachHang.GiaBan = Convert.ToDecimal(hoaDonNode.SelectSingleNode("GiaBan").InnerText);
+
+                    if (khachHang is KhachHangCaNhan)
+                    {
+                        ((KhachHangCaNhan)khachHang).KhoangCachGiaoHang = Convert.ToInt32(hoaDonNode.SelectSingleNode("KhoangCach").InnerText);
+                    }
+                    else if (khachHang is DaiLyCap1)
+                    {
+                        ((DaiLyCap1)khachHang).ThoiGianHopTac = Convert.ToInt32(hoaDonNode.SelectSingleNode("ThoiGianHopTac").InnerText);
+                    }
+                    else if (khachHang is KhachHangCongTy)
+                    {
+                        ((KhachHangCongTy)khachHang).SoLuongNhanVien = Convert.ToInt32(hoaDonNode.SelectSingleNode("SoLuongNhanVien").InnerText);
+                    }
+
+                    congTy.ThemHoaDon(khachHang);
+                }
+            }
+
+            congTy.XuatDanhSachHoaDon();
+        }
+        public void ThemHoaDon(KhachHang hoaDon)
         {
             DanhSachHoaDon.Add(hoaDon);
         }
 
+        public void XuatDanhSachHoaDon()
+        {
+            Console.WriteLine("Tên công ty: " + TenCongTy);
+            Console.WriteLine("Số điện thoại: " + SoDienThoai);
+            Console.WriteLine("Địa chỉ: " + DiaChi);
+            Console.WriteLine("Danh sách hóa đơn:");
+            foreach (var hoaDon in DanhSachHoaDon)
+            {
+                hoaDon.XuatThongTin();
+                Console.WriteLine("-------------------------");
+            }
+        }
         public decimal TinhTongThanhTien()
         {
             decimal tongThanhTien = 0;
-            foreach (HoaDon hoaDon in DanhSachHoaDon)
+            foreach (KhachHang hoaDon in DanhSachHoaDon)
             {
-                hoaDon.TinhThanhTien();
-                tongThanhTien += hoaDon.ThanhTien;
+                tongThanhTien += hoaDon.TinhThanhTien();
             }
             return tongThanhTien;
         }
 
-        public HoaDon TimKhachHangMuaNhieuNhat()
+        public KhachHang TimKhachHangMuaNhieuNhat()
         {
-            HoaDon khachHangMuaNhieuNhat = null;
-            int maxSoLuong = 0;
-            foreach (HoaDon hoaDon in DanhSachHoaDon)
+            KhachHang khachHangMuaNhieuNhat = null;
+            int soLuongMax = 0;
+            foreach (KhachHang hoaDon in DanhSachHoaDon)
             {
-                if (hoaDon.SoLuong > maxSoLuong)
+                if (hoaDon.SoLuong > soLuongMax)
                 {
-                    maxSoLuong = hoaDon.SoLuong;
                     khachHangMuaNhieuNhat = hoaDon;
+                    soLuongMax = hoaDon.SoLuong;
                 }
             }
             return khachHangMuaNhieuNhat;
         }
 
-        public decimal TinhTongChietKhauCongTy()
-        {
-            decimal tongChietKhau = 0;
-            foreach (HoaDon hoaDon in DanhSachHoaDon)
-            {
-                if (hoaDon is KhachHangCongTy)
-                {
-                    KhachHangCongTy khachHangCongTy = hoaDon as KhachHangCongTy;
-                    tongChietKhau += khachHangCongTy.TinhChietKhau();
-                }
-            }
-            return tongChietKhau;
-        }
+        //public decimal TongChietKhauCongTy()
+        //{
+        //    decimal tongChietKhau = 0;
+        //    foreach (KhachHang hoaDon in DanhSachHoaDon)
+        //    {
+        //        if (hoaDon is KhachHangCongTy)
+        //        {
+        //            KhachHangCongTy khachHangCongTy = hoaDon as KhachHangCongTy;
+        //            tongChietKhau += khachHangCongTy.TinhChietKhau();
+        //        }
+        //    }
+        //    return tongChietKhau;
+        //}
 
-        public List<DaiLyCap1> TimDaiLyCap1()
+
+        public void InDanhSachDaiLyCap1()
         {
-            List<DaiLyCap1> danhSachDaiLyCap1 = new List<DaiLyCap1>();
-            foreach (HoaDon hoaDon in DanhSachHoaDon)
+            Console.WriteLine("Danh sách khách hàng là đại lý cấp 1:");
+            foreach (KhachHang hoaDon in DanhSachHoaDon)
             {
                 if (hoaDon is DaiLyCap1)
                 {
                     DaiLyCap1 daiLyCap1 = hoaDon as DaiLyCap1;
-                    danhSachDaiLyCap1.Add(daiLyCap1);
+                    daiLyCap1.XuatThongTin();
+                    Console.WriteLine("-------------------------");
                 }
             }
-            return danhSachDaiLyCap1;
         }
     }
-
-    // Lớp chứa phương thức chính để chạy chương trình
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            CongTyABC congTy = new CongTyABC();
-            // Thực hiện đọc dữ liệu từ file XML và thêm vào danh sách hóa đơn của công ty
-            DocDuLieuTuFileXML(congTy);
+            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding= Encoding.UTF8;
+            CongTy congTy = new CongTy();
 
-            // Tính tổng thành tiền của tất cả các hóa đơn
+            // Gọi phương thức Input để nhập dữ liệu từ tệp tin
+            congTy.Input("data.xml");
+
+            // In ra danh sách hóa đơn
+            congTy.XuatDanhSachHoaDon();
+
+            // Tính tổng thành tiền của tất cả hóa đơn
             decimal tongThanhTien = congTy.TinhTongThanhTien();
-            Console.WriteLine("Tổng thành tiền của tất cả các hóa đơn: " + tongThanhTien);
+            Console.WriteLine("Tổng thành tiền: " + tongThanhTien);
 
-            // Tìm khách hàng có số lượng mua nhiều nhất
-            HoaDon khachHangMuaNhieuNhat = congTy.TimKhachHangMuaNhieuNhat();
-            if (khachHangMuaNhieuNhat != null)
-            {
-                Console.WriteLine("Khách hàng mua nhiều nhất là: " + khachHangMuaNhieuNhat.TenKhachHang);
-            }
-            else
-            {
-                Console.WriteLine("Không có khách hàng nào.");
-            }
+            // Tìm khách hàng mua nhiều nhất
+            //KhachHang khachHangMuaNhieuNhat = congTy.TimKhachHangMuaNhieuNhat();
+            //Console.WriteLine("Khách hàng mua nhiều nhất:");
+            //khachHangMuaNhieuNhat.XuatThongTin();
 
             // Tính tổng chiết khấu của khách hàng công ty
-            decimal tongChietKhauCongTy = congTy.TinhTongChietKhauCongTy();
-            Console.WriteLine("Tổng chiết khấu của khách hàng công ty: " + tongChietKhauCongTy);
+            //decimal tongChietKhauCongTy = congTy.TongChietKhauCongTy();
+            //Console.WriteLine("Tổng chiết khấu của khách hàng công ty: " + tongChietKhauCongTy);
 
-            // Tìm danh sách đại lý cấp 1
-            List<DaiLyCap1> danhSachDaiLyCap1 = congTy.TimDaiLyCap1();
-            Console.WriteLine("Danh sách đại lý cấp 1:");
-            foreach (DaiLyCap1 daiLyCap1 in danhSachDaiLyCap1)
-            {
-                Console.WriteLine("Mã khách hàng: " + daiLyCap1.MaKhachHang);
-                Console.WriteLine("Tên khách hàng: " + daiLyCap1.TenKhachHang);
-                Console.WriteLine("Số lượng: " + daiLyCap1.SoLuong);
-                Console.WriteLine("Giá bán: " + daiLyCap1.GiaBan);
-                Console.WriteLine("Thời gian hợp tác: " + daiLyCap1.ThoiGianHopTac);
-                Console.WriteLine("Thành tiền: " + daiLyCap1.ThanhTien);
-                Console.WriteLine();
-            }
+            // In danh sách đại lý cấp 1
+            congTy.InDanhSachDaiLyCap1();
 
             Console.ReadLine();
-        }
-
-        public static void DocDuLieuTuFileXML(CongTyABC congTy)
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("DuLieuHoaDon.xml");
-            XmlNodeList nodes = doc.SelectNodes("/HoaDon");
-
-            foreach (XmlNode node in nodes)
-            {
-                string maKhachHang = node.SelectSingleNode("MaKhachHang").InnerText;
-                string tenKhachHang = node.SelectSingleNode("TenKhachHang").InnerText;
-                int soLuong = int.Parse(node.SelectSingleNode("SoLuong").InnerText);
-                decimal giaBan = decimal.Parse(node.SelectSingleNode("GiaBan").InnerText);
-                string loaiKhachHang = node.SelectSingleNode("LoaiKhachHang").InnerText;
-
-                if (loaiKhachHang == "KhachHangCaNhan")
-                {
-                    int khoangCachGiaoHang = int.Parse(node.SelectSingleNode("KhoangCachGiaoHang").InnerText);
-                    KhachHangCaNhan khachHangCaNhan = new KhachHangCaNhan(maKhachHang, tenKhachHang, soLuong, giaBan, khoangCachGiaoHang);
-                    congTy.ThemHoaDon(khachHangCaNhan);
-                }
-                else if (loaiKhachHang == "DaiLyCap1")
-                {
-                    int thoiGianHopTac = int.Parse(node.SelectSingleNode("ThoiGianHopTac").InnerText);
-                    DaiLyCap1 daiLyCap1 = new DaiLyCap1(maKhachHang, tenKhachHang, soLuong, giaBan, thoiGianHopTac);
-                    congTy.ThemHoaDon(daiLyCap1);
-                }
-                else if (loaiKhachHang == "KhachHangCongTy")
-                {
-                    int soLuongNhanVien = int.Parse(node.SelectSingleNode("SoLuongNhanVien").InnerText);
-                    KhachHangCongTy khachHangCongTy = new KhachHangCongTy(maKhachHang, tenKhachHang, soLuong, giaBan, soLuongNhanVien);
-                    congTy.ThemHoaDon(khachHangCongTy);
-                }
-            }
         }
     }
 }

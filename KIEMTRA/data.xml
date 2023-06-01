@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HoTenSinhVien>
+	<TenCT>ABC</TenCT>
+	<SoDT>0779139003</SoDT>
+	<DiaChi>4 Duong Van Duong</DiaChi>
+	<DS>
+		<HoaDon>
+			<Loai>1</Loai>
+			<Ma>HD001</Ma>
+			<Ten>Nguyen Van A</Ten>
+			<SoLuong>3</SoLuong>
+			<GiaBan>100000</GiaBan>
+			<KhoangCach>15</KhoangCach>
+		</HoaDon>
+		<HoaDon>
+			<Loai>2</Loai>
+			<Ma>HD002</Ma>
+			<Ten>Le Thi B</Ten>
+			<SoLuong>5</SoLuong>
+			<GiaBan>200000</GiaBan>
+			<ThoiGianHopTac>4</ThoiGianHopTac>
+		</HoaDon>
+		<HoaDon>
+			<Loai>3</Loai>
+			<Ma>HD003</Ma>
+			<Ten>Cong Ty X</Ten>
+			<SoLuong>10</SoLuong>
+			<GiaBan>50000</GiaBan>
+			<SoLuongNhanVien>2000</SoLuongNhanVien>
+		</HoaDon>
+		<HoaDon>
+			<Loai>1</Loai>
+			<Ma>HD004</Ma>
+			<Ten>Tran Van C</Ten>
+			<SoLuong>2</SoLuong>
+			<GiaBan>150000</GiaBan>
+			<KhoangCach>8</KhoangCach>
+		</HoaDon>
+		<HoaDon>
+			<Loai>3</Loai>
+			<Ma>HD005</Ma>
+			<Ten>Cong Ty Y</Ten>
+			<SoLuong>7</SoLuong>
+			<GiaBan>80000</GiaBan>
+			<SoLuongNhanVien>800</SoLuongNhanVien>
+		</HoaDon>
+	</DS>
+</HoTenSinhVien>
